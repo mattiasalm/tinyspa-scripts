@@ -1,21 +1,31 @@
-const { exec } = require('child_process');
-
-const createManifest = require('./create-manifest');
-const createIcons = require('./create-icons');
-const createRobots = require('./create-robots');
-const createBasicServiceWorker = require('./create-basic-service-worker');
+const runRollup = require('./run-rollup');
+const del = require('del');
+const chalk = require('chalk');
 
 const create = () => {
-  createManifest();
-  createIcons();
-  createRobots();
-  createBasicServiceWorker();
+  require('./create-manifest')();
+  require('./create-icons')();
+  require('./create-robots')();
+  require('./create-basic-service-worker')();
 };
 
-exec('rm -rf public && ./node_modules/.bin/rollup -c node_modules/@tinyspa/scripts/rollup.config.js', (err, stdout, stderr) => {
-  if (err) {
-    console.error(err);
-    return;
+async function run(silent = false) {
+  const start = Date.now();
+  try {
+    await del('public');
+    await runRollup();
+    create();
+    const time = Date.now() - start;
+
+    !silent && console.log(chalk`
+  {greenBright.bold Successful ${process.env.NODE_ENV} build}    {greenBright ${(time / 1000).toFixed(2)}s}
+    `);
+  } catch (err) {
+    console.log(chalk`
+  {red.bold !!! ERROR}
+  ${err}
+    `);
   }
-  create();
-});
+}
+
+module.exports = run;
