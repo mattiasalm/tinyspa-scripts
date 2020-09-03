@@ -19,7 +19,7 @@
     "url": "https://github.com/mattiasalm/tinyspa-scripts/issues"
   },
   "homepage": "https://github.com/mattiasalm/tinyspa-scripts#readme",
-  "devDependencies": {
+  "dependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^5.0.2",
     "autoprefixer": "^9.8.6",

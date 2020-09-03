@@ -1,5 +1,4 @@
 const { exec } = require('child_process');
-const {series} = require('async');
 
 const createManifest = require('./create-manifest');
 const createIcons = require('./create-icons');
@@ -13,7 +12,10 @@ const create = () => {
   createBasicServiceWorker();
 };
 
-exec('./node_modules/.bin/rollup -c', (err, stdout, stderr) => {
-  console.log(stdout);
-  console.log(stderr);
+exec('rm -rf public && ./node_modules/.bin/rollup -c node_modules/@tinyspa/scripts/rollup.config.js', (err, stdout, stderr) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  create();
 });
