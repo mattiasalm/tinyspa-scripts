@@ -9,4 +9,5 @@ module.exports = {
   display: 'standalone',
   backgroundColor: '#000',
   themeColor: '#fff',
+  contentPrefetch: 'content',
 };
