@@ -20,6 +20,7 @@ module.exports = {
   display: 'standalone',
   backgroundColor: '#66EDA8',
   themeColor: '#66EDA8',
+  contentPrefetch: 'content'
 };
 ```
 

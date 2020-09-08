@@ -1,12 +1,5 @@
 const fs = require('fs');
-const { config, outputFileName, resolveSrcPath } = require('./_utils');
-
-const generatePrefetchLinks = () => {
-  const dir = resolveSrcPath(config.contentPrefetch);
-  const files = fs.readdirSync(dir);
-  return files.map(file => `<link rel="prefetch" href="${config.contentPrefetch}/${file}" />`)
-    .reduce((acc, curr) => `${acc}\n${curr}`, '');
-}
+const { config, outputFileName } = require('./_utils');
 
 module.exports = () => `
   <head>
@@ -20,5 +13,4 @@ module.exports = () => `
     <link rel="preconnect" href="https://storage.googleapis.com" />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="${outputFileName}.css" />
-    ${generatePrefetchLinks()}
 `;
