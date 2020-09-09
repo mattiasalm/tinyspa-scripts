@@ -11,6 +11,7 @@ Configuration file `app.config.js` can be included in `/src` folder to override 
 ```javascript
 module.exports = {
   name: 'tinyspa',
+  shortName: 'tinyspa',
   description: 'tinyspa site',
   iconSizes: [72, 96, 128, 144, 152, 192, 384, 512],
   iconPath: 'images/icons',

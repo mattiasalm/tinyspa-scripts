@@ -18,7 +18,7 @@ module.exports = () => {
     theme_color: config.themeColor,
   };
 
-  const path = resolvePublicPath('manifest.json');
+  const path = resolvePublicPath('manifest.webmanifest');
   createDir(resolvePublicPath())
   fs.writeFileSync(path, JSON.stringify(manifest, null, '\t'));
 };

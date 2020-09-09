@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const create = () => {
   require('./create-manifest')();
   require('./create-icons')();
+  require('./create-splash-screens')();
   require('./create-robots')();
   require('./create-basic-service-worker')();
 };

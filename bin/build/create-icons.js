@@ -24,5 +24,6 @@ module.exports = () => {
   config.iconSizes.forEach(size => {
     fs.writeFileSync(resolvePublicPath(iconName(size)), createIcon(size));
   })
-  fs.writeFileSync(resolvePublicPath(`${config.iconPath}/favicon.png`), createIcon(72));
+  fs.writeFileSync(resolvePublicPath(`${config.iconPath}/favicon-32.png`), createIcon(32));
+  fs.writeFileSync(resolvePublicPath(`${config.iconPath}/favicon-16.png`), createIcon(16));
 }
