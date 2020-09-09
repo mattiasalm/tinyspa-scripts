@@ -13,7 +13,7 @@ module.exports = () => `
     <meta name="theme-color" content="${config.themeColor}" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="${config.name}" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="icon" type="image/png" sizes="32x32" href="${config.iconPath}/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="${config.iconPath}/favicon-16.png" />
     <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="${config.iconPath}/icon-152x152.png" />

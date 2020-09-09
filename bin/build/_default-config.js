@@ -12,10 +12,12 @@ module.exports = {
   themeColor: '#fff',
   contentPrefetch: 'content',
   splashScreenSizes: [
-    [375, 812, 3], // width, height, pixel-ratio
+    [320, 568, 2],
     [375, 667, 2],
     [414, 736, 3],
-    [320, 568, 2],
+    [375, 812, 3],
+    [414, 896, 2],
+    [414, 896, 3],
     [768, 1024, 2],
     [834, 1112, 2],
     [1024, 1366, 2],
