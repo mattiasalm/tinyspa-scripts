@@ -1,4 +1,6 @@
-# tinyspa-scripts
+[![npm version](https://badge.fury.io/js/%40tinyspa%2Fscripts.svg)](https://www.npmjs.com/package/@tinyspa/scripts)
+
+# [@tinyspa/scripts](https://www.npmjs.com/package/@tinyspa/scripts)
 
 Package containing scripts to build and serve a site based on [@tinyspa/core](https://github.com/mattiasalm/tinyspa-core).
 
