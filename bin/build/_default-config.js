@@ -11,6 +11,7 @@ module.exports = {
   backgroundColor: '#000',
   themeColor: '#fff',
   contentPrefetch: 'content',
+  generateValidRoutes: true,
   splashScreenSizes: [
     [320, 568, 2],
     [375, 667, 2],
